@@ -10,10 +10,10 @@ app.use( (req, res, next) =>
     next();
 });
 
-app.use('/api/notes', noteRoutes);
-
 //router init
 app.get('/', (req, res) => { res.json("Welcome to the test app.") });
+
+app.use('/api/notes', noteRoutes);
 
 //listen for requests
 app.listen(process.env.PORT, () => { console.log(`listening on port ${process.env.PORT}!!!`); });
