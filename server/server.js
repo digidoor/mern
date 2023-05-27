@@ -4,6 +4,9 @@ const noteRoutes = require('./routes/notes');
 
 //express app
 const app = express();
+
+//middleware
+app.use(express.json()); // allows us to grab things out of req.body
 app.use( (req, res, next) =>
 {
     console.log(req.path, req.method);
